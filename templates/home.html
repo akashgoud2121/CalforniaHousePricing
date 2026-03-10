@@ -1,3 +1,25 @@
-<h1>
-    Hello World
-</h1>
+<body>
+
+<div class="login">
+    <h1>Calfornia House Price Prediction</h1>
+
+<!-- Main input for recieving query to our ml model-->
+
+<form action="{{url_for('predict')}}" method="post">
+    <input type="text" name="MedInc" placeholder="MedInc" required="required"/> <br>
+    <input type="text" name="HouseAge" placeholder="HouseAge" required="required"/> <br>
+    <input type="text" name="AveRooms" placeholder="AveRooms" required="required"/> <br>
+    <input type="text" name="AveBedrms" placeholder="AveBedrms" required="required"/> <br>
+    <input type="text" name="Population" placeholder="Population" required="required"/> <br>
+    <input type="text" name="AveOccup" placeholder="AveOccup" required="required"/> <br>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+
+<br>
+<br>
+
+</div>
+{{prediction_text}}
+
+</body>
+</html>
